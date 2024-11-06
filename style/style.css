@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "mta";
+    src: url('../style/monofonto\ rg.otf');
+}
+
+body {
+    color: brown;
+    font-size: 1.5rem;
+    font-family: "mta";
+    /* background-image: url('../asset/mta.jpg'); */
+}
+
+header {
+    color: aqua;
+    background-color: brown;
+}
