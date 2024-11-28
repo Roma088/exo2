@@ -102,9 +102,11 @@ nav{
     width: 20vw;
     background-color: brown;    
     position: fixed;
+    left: calc(-20vw - 1vh);
     top: 21vh;
     margin-left: 1vh;
     z-index: 5;
+    transition: left 1s;
 }
 
 .bouton{
@@ -128,4 +130,32 @@ nav{
     color: white;
     border: white 2px solid;
     box-shadow: 0 0 2px 0;
+}
+
+#trigger {
+    position: fixed;
+    top: 25vh;
+    width: 5vh;
+    aspect-ratio: 1;
+    background-color: #6c4747;
+    border: solid 1px black;
+    border-radius: 0 10px 10px 0;
+    background-image: url(../asset/mta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#close {
+    display: none;
+    position: relative;
+    top: -8vh;
+    left: 10vh;
+    width: 5vh;
+    aspect-ratio: 1;
+    background-color: #6c4747;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-image: url(../asset/mta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
