@@ -1,27 +1,53 @@
+<?php
+    $isLogged = true;
+    $title = "Silence On Lit à l'E2C";
+    $subtitle = "Lire c'est bien";
+
+    $navButtons = [
+        [
+            "label" => "Accueil", 
+            "path" => "../controller/homeController.php"
+        ],
+        [
+            "label" => "Bibliothèque", 
+            "path" => "../controller/libraryController.php"
+        ],
+        [
+            "label" => "Espace détente", 
+            "path" => "../controller/gameController.php"
+        ],
+        [
+            "label" => "Qui sommes-nous ?", 
+            "path" => "../controller/usController.php"
+        ]
+    ];
+
+    if($isLogged) {
+        $navButtons[]= [
+            "label" => "Mon compte",
+            "path"  => "../controller/accountController.php"
+        ];
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../exo2/style/style.css">
-    <script type="module" src="../exo2/JS/test.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="module" src="../JS/nav.js"></script>
     <title>Livre</title>
 </head>
 <body>
-    <header>
-        <img src="../asset/logo.png" alt="" id="logo">
-        <div id="titres">
-            <h1>Silence On Lit à l'E2C</h1>
-            <h2>OK</h2>
-        </div> 
-    </header>
 
-    <nav>
-        <a href="./index.html" class="bouton">Accueil</a>
-        <a href="./page/library.html" class="bouton">Bibliothèque</a>
-        <a href="./page/game.html" class="bouton">Espace détente</a>
-        <a href="./page/us.html" class="bouton">Qui sommes-nous</a>
-    </nav>
+    <?php
+    require_once("../module/_header.php");
+    require_once("../module/_nav.php")
+    ?>
+
+
 
     <main>
         <article>
@@ -71,4 +97,6 @@
     </main>
 
     </body>
+    <div id="trigger"></div>
+
 </html>
